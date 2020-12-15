@@ -57,7 +57,7 @@ public class SalvoController {
         long player2Turn = opponent.getSalvo().size();
 
         if (myTurn > player2Turn) {
-            return new ResponseEntity<>(Util.makeMap("error", "not your turn"), HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(Util.makeMap("error", "Turno de tu oponente"), HttpStatus.FORBIDDEN);
         }
             salvo.setTurn(myTurn+1);
             gamePlayer.addSalvo(salvo);

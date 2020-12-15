@@ -75,12 +75,12 @@ public class Util {
             int oppImpact = hitsDTO.makeImpacts(Util.getOpponent(gamePlayer).get());
 
 
-            if(myImpact == 17 && oppImpact == 17) {
+            if(myImpact == 17 && oppImpact == 17 ) {
                 return "TIE";
-            } else if(myImpact == 17){
+            } else if(myImpact == 17  && gamePlayer.getSalvo().size() == Util.getOpponent(gamePlayer).get().getSalvo().size()){
                 return "LOSE";
 
-            }else if (oppImpact == 17){
+            }else if (oppImpact == 17 && gamePlayer.getSalvo().size() == Util.getOpponent(gamePlayer).get().getSalvo().size()){
                 return "WON";
             }
         }
