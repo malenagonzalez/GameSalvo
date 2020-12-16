@@ -78,7 +78,7 @@ public class Util {
             if(myImpact == 17 && oppImpact == 17 ) {
                 return "TIE";
             } else if(myImpact == 17  && gamePlayer.getSalvo().size() == Util.getOpponent(gamePlayer).get().getSalvo().size()){
-                return "LOSE";
+                return "LOST";
 
             }else if (oppImpact == 17 && gamePlayer.getSalvo().size() == Util.getOpponent(gamePlayer).get().getSalvo().size()){
                 return "WON";

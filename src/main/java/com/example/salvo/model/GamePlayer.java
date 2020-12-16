@@ -28,7 +28,9 @@ public class GamePlayer {
     private Set<Ship> ships;
 
     @OneToMany(mappedBy = "gamePlayer", fetch = FetchType.EAGER)
+    @OrderBy
     private Set<Salvo> salvos;
+
 
 
     public void addShip(Ship ship){
@@ -111,6 +113,7 @@ public class GamePlayer {
     public void addSalvo(Salvo salvo){
         salvo.setGamePlayer(this);
         salvos.add(salvo);
+
     }
 
 
